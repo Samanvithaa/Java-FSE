@@ -1,0 +1,28 @@
+1. Asymptotic Notation and Search Analysis
+  Big O notation represents the worst-case time complexity of an algorithm. 
+  It helps analyze how the performance of an algorithm scales with input size n.
+
+  Time complexities for common search algorithms are as follows:
+    i.Linear Search:
+      Best Case: O(1)
+      Average Case: O(n)
+      Worst Case: O(n)
+
+    ii.Binary Search:
+      Best Case: O(1)
+      Average Case: O(log n)
+      Worst Case: O(log n)
+
+2.Implementation Summary
+  Linear search iterates through each element in the array one by one until it finds the target element or reaches the end of the array.
+Binary search works by repeatedly dividing a sorted array in half, comparing the target value with the middle element,
+and narrowing the search space accordingly.
+
+3.Analysis
+  Linear search is simple and works on unsorted arrays, but it becomes inefficient for large datasets due to its linear time complexity.
+Binary search is more efficient with a logarithmic time complexity but requires that the array be sorted before performing the search.
+
+4.Recommendation
+  For an e-commerce platform that handles a large number of products, binary search is more suitable because of its better 
+performance on sorted data. However, for dynamic datasets or real-time search needs, using advanced structures like hash maps
+or relying on database indexing would be more appropriate.
