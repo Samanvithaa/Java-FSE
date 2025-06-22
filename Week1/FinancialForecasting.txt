@@ -1,0 +1,25 @@
+Financial Forecasting Theory
+
+1. Understanding Recursive Algorithms
+  Recursion is a programming technique where a method calls itself to solve smaller instances of a problem. 
+  It is particularly useful for problems that can be broken down into similar sub-problems, such as financial calculations,
+  tree traversal, or factorial computation. In the context of forecasting, recursion can simplify the computation of compound growth over time.
+
+2. Setup
+  We define a method that takes the current value, the annual growth rate, and the number of years as input. 
+  The method recursively applies the growth rate year by year to forecast the future value.
+
+3. Implementation Summary
+  The recursive function multiplies the current value by (1 + growthRate) for each year until it reaches the base case where years = 0.
+  For optimization, an iterative version can be used to prevent call stack overhead.
+
+4. Time Complexity
+  The time complexity of the recursive implementation is O(n), where n is the number of years.
+  Each recursive call represents one year of forecasting.
+
+5. Optimization
+  Although recursion simplifies logic, it can lead to performance issues due to deep call stacks, especially for large values of n. To optimize, we can:
+  - Use an iterative approach to avoid recursion overhead.
+  - Apply memoization if subproblems overlap (not applicable here, but useful in other recursive contexts).
+  - For constant growth rates, direct mathematical formulas such as compound interest can also be used: 
+    Future Value = currentValue * (1 + growthRate)^years
